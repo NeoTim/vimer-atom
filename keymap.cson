@@ -1,0 +1,50 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':
+#   'enter': 'editor:newline'
+#
+# 'body':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+
+
+# 'body':
+#   'ctrl-l': 'core:move-up'
+#   'ctrl-j': 'core:move-down'
+#   'ctrl-p': 'fuzzy-finder:toggle-file-finder'
+#   'ctrl-b': 'fuzzy-finder:toggle-buffer-finder'
+
+
+'atom-text-editor':
+  'ctrl-p': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-k': 'core:move-up'
+  'ctrl-j': 'core:move-down'
+
+'atom-text-editor.vim-mode':
+  '; w': 'core:save'
+  '; q': 'core.close'
+
+
+'editor.operator-pending.mode, .editor.visual-mode':
+  'i w': 'vim-mode:select-inside-word'
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'ctrl-h': 'window:focus-pane-on-left'
+  'ctrl-l': 'window:focus-pane-on-right'
+  'ctrl-k': 'window:focus-pane-on-above'
+  'ctrl-j': 'window:focus-pane-on-below'
+
+'atom-text-editor.vim-mode.command-mode':
+  'g f': 'open-this:here'
+  'ctrl-w f': 'open-this:split-down'
+  'ctrl-w F': 'open-this:split-right'

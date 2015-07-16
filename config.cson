@@ -1,0 +1,40 @@
+"*":
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    zoomFontWhenCtrlScrolling: true
+    softWrap: true
+  core:
+    followSymlinks: false
+    projectHome: "/Users/forsginer/vhosht"
+    destroyEmptyPanes: false
+    audioBeep: false
+    disabledPackages: [
+      "emmet"
+      "symbols-view"
+    ]
+  "exception-reporting":
+    userId: "965f6697-e5db-90fb-04d3-99686e15f6d2"
+  "release-notes":
+    viewedVersion: "0.60.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "51662735655162b544370d7edae7153b0177101b"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  nuclide:
+    remoteProjectsConfig: []
+  "nuclide-flow": {}
+  emmet: {}
+  "vim-mode": {}
+  minimap:
+    absoluteMode: true
+    plugins:
+      "minimap-hide": true
+  "save-session":
+    dataSaveFolder: "/Users/forsigner/.atom/packages/save-session/projects"
+  "flex-tool-bar": {}
+  react: {}
+  "tool-bar":
+    position: "Left"
