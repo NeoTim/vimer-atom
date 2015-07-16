@@ -24,7 +24,6 @@
 #   'ctrl-p': 'fuzzy-finder:toggle-file-finder'
 #   'ctrl-b': 'fuzzy-finder:toggle-buffer-finder'
 
-
 'atom-text-editor':
   'ctrl-p': 'fuzzy-finder:toggle-file-finder'
   'ctrl-k': 'core:move-up'
