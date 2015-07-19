@@ -6,12 +6,23 @@
     softWrap: true
   core:
     followSymlinks: false
-    projectHome: "/Users/forsginer/vhosht"
-    destroyEmptyPanes: false
-    audioBeep: false
+    projectHome: "/Users/forsginer/repos"
     disabledPackages: [
       "emmet"
       "symbols-view"
+    ]
+    excludeVcsIgnoredPaths: false
+    destroyEmptyPanes: false
+    audioBeep: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+      "bower_components"
     ]
   "exception-reporting":
     userId: "965f6697-e5db-90fb-04d3-99686e15f6d2"
@@ -23,18 +34,17 @@
     userId: "51662735655162b544370d7edae7153b0177101b"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  nuclide:
-    remoteProjectsConfig: []
-  "nuclide-flow": {}
-  emmet: {}
-  "vim-mode": {}
-  minimap:
-    absoluteMode: true
-    plugins:
-      "minimap-hide": true
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
   "save-session":
     dataSaveFolder: "/Users/forsigner/.atom/packages/save-session/projects"
-  "flex-tool-bar": {}
   react: {}
-  "tool-bar":
-    position: "Left"
+  preview:
+    _analyticsUserId: "84d44b4b-b8aa-4ff4-99fd-e8dace59ddc2"
+  "atom-beautify":
+    _analyticsUserId: "56d5033f-aafa-4100-91e8-e4275f4c177c"
+  "disable-keybindings":
+    allBundledPackages: true
+    exceptBundledPackages: [
+      "vim-mode"
+    ]
