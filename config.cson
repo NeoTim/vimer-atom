@@ -12,7 +12,6 @@
       "symbols-view"
     ]
     excludeVcsIgnoredPaths: false
-    destroyEmptyPanes: false
     audioBeep: false
     ignoredNames: [
       ".git"
@@ -48,3 +47,5 @@
     exceptBundledPackages: [
       "vim-mode"
     ]
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true

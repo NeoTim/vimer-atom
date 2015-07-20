@@ -23,19 +23,19 @@
 ##################################################################################
 'body':
 
-  # 'ctrl-k': 'core:move-up'
-  # 'ctrl-j': 'core:move-down'
-
   # find file
   'ctrl-p': 'fuzzy-finder:toggle-file-finder'
   'ctrl-shift-p': 'command-palette:toggle'
   'ctrl-b': 'fuzzy-finder:toggle-buffer-finder'
   'ctrl-shift-b': 'fuzzy-finder:toggle-git-status-finder'
 
-  'g p': 'git-projects:toggle' # git-project
+
+  'ctrl-o': 'aplication:open'
+  'ctrl-shift-o': 'aplication:add-project-folder'
+  'alt-o': 'git-projects:toggle' # git-project
 
   # tree view
-  '; t': 'tree-view:toggle'
+  'ctrl \\': 'tree-view:toggle'
 
 
 
@@ -51,7 +51,7 @@
 ##################################################################################
 
 ## vim command-mode
-'atom-text-editor.vim-mode.command-mode':
+'atom-text-editor.vim-mode.command-mode:not(.insert-mode)':
 
   'c c': 'editor:toggle-line-comments' # comment
   'alt-space': 'termrk:toggle'
