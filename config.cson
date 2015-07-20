@@ -19,6 +19,7 @@
       ".svn"
       ".DS_Store"
       "._*"
+      ".sass-cache"
       "Thumbs.db"
       "node_modules"
       "bower_components"
@@ -49,3 +50,5 @@
     ]
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+  "symbols-tree-view":
+    autoToggle: true

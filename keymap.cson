@@ -37,7 +37,7 @@
   # tree view
   'ctrl \\': 'tree-view:toggle'
 
-
+  'delete': 'core:delete'
 
 ##################################################################################
 # body level
@@ -59,9 +59,14 @@
   # manage pane
   'w v': 'pane:split-right' # split vertial
   'w h': 'pane:split-down' # split horizon
-  'w c': 'pane:close' # close
+  'w c': 'core:close' # close
   'ctrl-h': 'window:focus-pane-on-left'
   'ctrl-l': 'window:focus-pane-on-right'
+
+  # tab
+  't n': 'pane:show-next-item'
+  't p': 'pane:show-previous-item'
+
   # 'ctrl-k': 'window:focus-pane-on-above'
   # 'ctrl-j': 'window:focus-pane-on-below'
 
@@ -86,6 +91,7 @@
   'g t': 'atom-ctags:go-to-declaration'
 
   'm d': 'markdown-preview:toggle'
+  't b': 'symbols-tree-view:toggle'
 
   'ctrl-shift-f': 'fuzzy-grep:toggle'
 
