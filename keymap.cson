@@ -35,9 +35,7 @@
   'alt-o': 'git-projects:toggle' # git-project
 
   # tree view
-  'ctrl \\': 'tree-view:toggle'
-
-  'delete': 'core:delete'
+  'ctrl-\\': 'tree-view:toggle'
 
 ##################################################################################
 # body level
@@ -100,6 +98,16 @@
   'ctrl-b': 'fuzzy-finder:toggle-buffer-finder'
   'ctrl-shift-b': 'fuzzy-finder:toggle-git-status-finder'
 
+  'alt-w': 'core:close'
+
+  # move-up
+  'shift-h': 'editor:move-to-first-character-of-line'
+  'shift-l': 'editor:move-to-end-of-screen-line'
+
+  'ctrl-t': 'atom-ctags:toggle-file-symbols'
+
+  # selection
+  'ctrl-a': 'core:select-all'
 
 ## vim visual-mode
 'atom-text-editor.vim-mode.visual-mode':

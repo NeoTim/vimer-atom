@@ -52,3 +52,7 @@
     disableWhenNoEslintrcFileInPath: true
   "symbols-tree-view":
     autoToggle: true
+  "git-log": {}
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  "autoclose-html": {}
