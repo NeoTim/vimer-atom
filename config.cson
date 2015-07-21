@@ -24,6 +24,7 @@
       "node_modules"
       "bower_components"
     ]
+    destroyEmptyPanes: false
   "exception-reporting":
     userId: "965f6697-e5db-90fb-04d3-99686e15f6d2"
   "release-notes":
@@ -56,3 +57,4 @@
   "atom-ctags":
     autoBuildTagsWhenActive: true
   "autoclose-html": {}
+  "tree-view": {}
