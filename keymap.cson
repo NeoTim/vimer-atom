@@ -29,6 +29,8 @@
   'ctrl-b': 'fuzzy-finder:toggle-buffer-finder'
   'ctrl-shift-b': 'fuzzy-finder:toggle-git-status-finder'
 
+  #find
+  'cmd-f': 'project-find:toggle'
 
   'ctrl-o': 'aplication:open'
   'ctrl-shift-o': 'aplication:add-project-folder'
@@ -38,6 +40,16 @@
   'ctrl-\\': 'tree-view:toggle'
   'ctrl-,': 'tree-view:toggle-focus'
   'f2': 'tree-view:rename'
+  'f1': 'tree-view:remove'
+  'ctrl-c': 'tree-view:duplicate'
+  'ctrl-v': 'tree-view:paste'
+  'ctrl-n': 'tree-view:add-file'
+  'ctrl-shift-n': 'tree-view:add-folder'
+  'ctrl-shift-f': 'tree-view:add-folder'
+
+
+  # project-manager
+  'cmd-p': 'project-manager:list-projects'
 
 ##################################################################################
 # body level
@@ -51,7 +63,7 @@
 ##################################################################################
 
 ## vim command-mode
-'atom-text-editor.vim-mode.command-mode:not(.insert-mode)':
+'atom-text-editor.vim-mode.normal-mode:not(.insert-mode)':
 
   'c c': 'editor:toggle-line-comments' # comment
   'alt-space': 'termrk:toggle'
@@ -62,6 +74,8 @@
   'w c': 'core:close' # close
   'ctrl-h': 'window:focus-pane-on-left'
   'ctrl-l': 'window:focus-pane-on-right'
+  'ctrl-j': 'window:focus-pane-below'
+  'ctrl-k': 'window:focus-pane-above'
 
   # tab
   't n': 'pane:show-next-item'
@@ -77,6 +91,19 @@
   'g h': 'git-history:show-file-history' # git-history
   'g c': 'git-control:toggle' # git-project
 
+  # emmet
+  # 'atom-text-editor[data-grammar="YOUR GRAMMAR HERE"]:not([mini])':
+    # 'tab': 'emmet:expand-abbreviation-with-tab'
+
+  # jscs
+  '; j': 'jscs-fixer:fix'
+
+  # ternjs
+  '; t': 'tern:restart'
+
+  # smalls
+  '; a': 'smalls:start'
+
   # open this
   'g f': 'open-this:here'
   'ctrl-w f': 'open-this:split-down'
@@ -86,7 +113,8 @@
   '; w': 'core:save'
 
   '; f': 'atom-beautify:beautify-editor' # code format
-  '; c': 'atom-beautify:beautify-editor' # csscomb
+  '; e': 'esformatter' # code format
+  '; c': 'csscomb:run' # csscomb
 
   'g t': 'atom-ctags:go-to-declaration'
 
@@ -99,8 +127,6 @@
   'ctrl-shift-p': 'command-palette:toggle'
   'ctrl-b': 'fuzzy-finder:toggle-buffer-finder'
   'ctrl-shift-b': 'fuzzy-finder:toggle-git-status-finder'
-
-  'alt-w': 'core:close'
 
   # move-up
   'shift-h': 'editor:move-to-first-character-of-line'

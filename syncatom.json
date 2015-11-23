@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Termrk"
+  },
+  {
+    "name": "angularjs"
+  },
+  {
+    "name": "ask-stack"
+  },
+  {
+    "name": "atom-beautify"
+  },
+  {
+    "name": "atom-bootstrap3"
+  },
+  {
+    "name": "atom-ctags"
+  },
+  {
+    "name": "atom-fuzzy-grep"
+  },
+  {
+    "name": "atom-runner"
+  },
+  {
+    "name": "atom-ternjs"
+  },
+  {
+    "name": "atom-wallaby"
+  },
+  {
+    "name": "auto-detect-indentation"
+  },
+  {
+    "name": "auto-update-packages"
+  },
+  {
+    "name": "autoclose-html"
+  },
+  {
+    "name": "autocomplete-paths"
+  },
+  {
+    "name": "blame"
+  },
+  {
+    "name": "browser-plus"
+  },
+  {
+    "name": "clipboard-plus"
+  },
+  {
+    "name": "color-picker"
+  },
+  {
+    "name": "css-snippets"
+  },
+  {
+    "name": "csscomb"
+  },
+  {
+    "name": "dash"
+  },
+  {
+    "name": "disable-keybindings"
+  },
+  {
+    "name": "docblockr"
+  },
+  {
+    "name": "editorconfig"
+  },
+  {
+    "name": "emmet"
+  },
+  {
+    "name": "esformatter"
+  },
+  {
+    "name": "ex-mode"
+  },
+  {
+    "name": "expand-region"
+  },
+  {
+    "name": "file-icons"
+  },
+  {
+    "name": "git-control"
+  },
+  {
+    "name": "git-diff-details"
+  },
+  {
+    "name": "git-difftool"
+  },
+  {
+    "name": "git-history"
+  },
+  {
+    "name": "git-log"
+  },
+  {
+    "name": "git-plus"
+  },
+  {
+    "name": "git-projects"
+  },
+  {
+    "name": "git-status"
+  },
+  {
+    "name": "gitignore-snippets"
+  },
+  {
+    "name": "gulp-control"
+  },
+  {
+    "name": "highlight-column"
+  },
+  {
+    "name": "imdone-atom"
+  },
+  {
+    "name": "javascript-snippets"
+  },
+  {
+    "name": "jquery-snippets"
+  },
+  {
+    "name": "jscs-fixer"
+  },
+  {
+    "name": "jumpy"
+  },
+  {
+    "name": "language-SCSS"
+  },
+  {
+    "name": "language-babel"
+  },
+  {
+    "name": "language-javascript"
+  },
+  {
+    "name": "language-javascript-semantic"
+  },
+  {
+    "name": "linter"
+  },
+  {
+    "name": "linter-csslint"
+  },
+  {
+    "name": "linter-eslint"
+  },
+  {
+    "name": "linter-htmlhint"
+  },
+  {
+    "name": "linter-jscs"
+  },
+  {
+    "name": "linter-jsonlint"
+  },
+  {
+    "name": "linter-scss-lint"
+  },
+  {
+    "name": "markdown-writer"
+  },
+  {
+    "name": "merge-conflicts"
+  },
+  {
+    "name": "nerd-treeview"
+  },
+  {
+    "name": "nodejs-snippets"
+  },
+  {
+    "name": "npm-install"
+  },
+  {
+    "name": "open-recent"
+  },
+  {
+    "name": "open-this"
+  },
+  {
+    "name": "paner"
+  },
+  {
+    "name": "pigments"
+  },
+  {
+    "name": "preview"
+  },
+  {
+    "name": "project-manager"
+  },
+  {
+    "name": "project-view"
+  },
+  {
+    "name": "regex-railroad-diagram"
+  },
+  {
+    "name": "remote-edit"
+  },
+  {
+    "name": "script"
+  },
+  {
+    "name": "set-syntax"
+  },
+  {
+    "name": "smalls"
+  },
+  {
+    "name": "symbols-tree-view"
+  },
+  {
+    "name": "tabs-to-spaces"
+  },
+  {
+    "name": "todo-show"
+  },
+  {
+    "name": "trailing-spaces"
+  },
+  {
+    "name": "travis-ci-status"
+  },
+  {
+    "name": "tree-view-git-status"
+  },
+  {
+    "name": "turbo-javascript"
+  },
+  {
+    "name": "vim-mode"
+  },
+  {
+    "name": "vim-mode-clipboard-plus"
+  },
+  {
+    "name": "vim-mode-zz"
+  },
+  {
+    "name": "vim-surround"
+  }
+]

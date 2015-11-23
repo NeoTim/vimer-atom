@@ -8,10 +8,8 @@
     followSymlinks: false
     projectHome: "/Users/forsginer/repos"
     disabledPackages: [
-      "emmet"
       "symbols-view"
     ]
-    excludeVcsIgnoredPaths: false
     audioBeep: false
     ignoredNames: [
       ".git"
@@ -23,6 +21,7 @@
       "Thumbs.db"
       "node_modules"
       "bower_components"
+      "dist"
     ]
     destroyEmptyPanes: false
   "exception-reporting":
@@ -39,7 +38,6 @@
     useClipboardAsDefaultRegister: true
   "save-session":
     dataSaveFolder: "/Users/forsigner/.atom/packages/save-session/projects"
-  react: {}
   preview:
     _analyticsUserId: "84d44b4b-b8aa-4ff4-99fd-e8dace59ddc2"
   "atom-beautify":
@@ -58,3 +56,11 @@
     autoBuildTagsWhenActive: true
   "autoclose-html": {}
   "tree-view": {}
+  docblockr: {}
+  linter: {}
+  emmet: {}
+  "tabs-to-spaces":
+    onSave: "untabify"
+  "git-projects": {}
+  "highlight-column": {}
+  jumpy: {}

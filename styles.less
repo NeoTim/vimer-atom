@@ -46,3 +46,28 @@
 .termrk .terminal > div {
     height: calc(1.2em);
 }
+
+//===========================================================================
+// highlight-column
+//===========================================================================
+
+atom-text-editor.editor.vim-mode.visual-mode .highlight-column,
+atom-text-editor.editor.vim-mode.visual-mode::shadow .highlight-column {
+    background-color: rgba(153, 187, 255, 0.8);
+}
+atom-text-editor .highlight-column,
+atom-text-editor::shadow .highlight-column {
+    background-color: rgba(153, 187, 255, 0);
+}
+
+//===========================================================================
+// jumpy
+//===========================================================================
+atom-text-editor::shadow .jumpy {
+    &.label {
+        background: #2094ff;
+        color: #fff;
+    }
+    &.jump {
+    }
+}
