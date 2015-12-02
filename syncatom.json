@@ -250,5 +250,29 @@
   },
   {
     "name": "vim-surround"
+  },
+  {
+    "name": "activate-power-mode"
+  },
+  {
+    "name": "auto-copyright"
+  },
+  {
+    "name": "markdown-scroll-sync"
+  },
+  {
+    "name": "markdown-table-formatter"
+  },
+  {
+    "name": "package-generator"
+  },
+  {
+    "name": "revealjs-preview"
+  },
+  {
+    "name": "vim-html-dit"
+  },
+  {
+    "name": "wordcount"
   }
 ]

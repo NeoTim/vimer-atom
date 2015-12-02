@@ -9,6 +9,7 @@
     projectHome: "/Users/forsginer/repos"
     disabledPackages: [
       "symbols-view"
+      "highlight-column"
     ]
     audioBeep: false
     ignoredNames: [
@@ -64,3 +65,8 @@
   "git-projects": {}
   "highlight-column": {}
   jumpy: {}
+  "linter-jscs":
+    onlyConfig: true
+    fixOnSave: true
+  Termrk:
+    defaultHeight: 326

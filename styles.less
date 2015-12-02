@@ -7,15 +7,20 @@
  * If you are unfamiliar with LESS, you can read more about it here:
  * http://www.lesscss.org
  */
-
 .tree-view {
 
 }
-
-.editor {
-
+// atom-text-editor.editor.is-focused {
+//   background: url(http://joelb.me/blog/assets/ComputerMousePS.png) no-repeat bottom right;
+// }
+atom-text-editor.editor {
+  background: url(/Users/chenzhiyi/.atom/girl.png) no-repeat bottom right;
+  background-size: 300px auto;
 }
-
+.tree-view.full-menu.list-tree.has-collapsable-children.focusable-panel {
+  background: url(/Users/chenzhiyi/.atom/heben.png) no-repeat bottom right;
+  background-size: 400px auto;
+}
 .editor .cursor {
 
 }
@@ -23,51 +28,50 @@
 //===========================================================================
 // vim-mode
 //===========================================================================
-
 //===========================================================================
 // termrk
 //===========================================================================
 .termrk .terminal {
-    color: #828997;
-    background-color: #282c34;
-    border-top: none;
-    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier !important;
-    padding-left: 8px;
-    padding-top: 2px;
+  color: #828997;
+  background-color: #282c34;
+  border-top: none;
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier !important;
+  padding-left: 8px;
+  padding-top: 2px;
 }
-
 .termrk .terminal-cursor {
-    color: black;
-    background-color: white;
+  color: black;
+  background-color: white;
 }
 .atom-panel.bottom.termrk-panel {
-    border-top: none;
+  border-top: none;
 }
 .termrk .terminal > div {
-    height: calc(1.2em);
+  height: calc(1.2em);
+
 }
 
 //===========================================================================
 // highlight-column
 //===========================================================================
-
 atom-text-editor.editor.vim-mode.visual-mode .highlight-column,
 atom-text-editor.editor.vim-mode.visual-mode::shadow .highlight-column {
-    background-color: rgba(153, 187, 255, 0.8);
+  background-color: rgba(153, 187, 255, 0.8);
 }
 atom-text-editor .highlight-column,
 atom-text-editor::shadow .highlight-column {
-    background-color: rgba(153, 187, 255, 0);
+  background-color: rgba(153, 187, 255, 0);
 }
 
 //===========================================================================
 // jumpy
 //===========================================================================
 atom-text-editor::shadow .jumpy {
-    &.label {
-        background: #2094ff;
-        color: #fff;
-    }
-    &.jump {
-    }
+  &.label {
+    background: #2094ff;
+    color: #fff;
+  }
+  &.jump {
+
+  }
 }
