@@ -30,7 +30,7 @@
   'ctrl-shift-b': 'fuzzy-finder:toggle-git-status-finder'
 
   #find
-  'cmd-f': 'project-find:toggle'
+  # 'cmd-f': 'project-find:toggle'
 
   'ctrl-o': 'aplication:open'
   'ctrl-shift-o': 'aplication:add-project-folder'
@@ -45,18 +45,28 @@
   'ctrl-v': 'tree-view:paste'
   'ctrl-n': 'tree-view:add-file'
   'ctrl-shift-n': 'tree-view:add-folder'
-  'ctrl-shift-f': 'tree-view:add-folder'
 
 
   # project-manager
   'cmd-p': 'project-manager:list-projects'
 
-##################################################################################
-# body level
+  # find and replace
+  'cmd-F': 'project-find:show'
+  'cmd-f': 'find-and-replace:show'
+  'cmd-alt-f': 'find-replace:show-replace'
+
+################################################################################# body level
 ##################################################################################
 'atom-text-editor':
   'ctrl-k': 'core:move-up'
   'ctrl-j': 'core:move-down'
+
+
+##################################################################################
+# workspace
+##################################################################################
+'atom-workspace':
+  'ctrl-9': 'git-hide:toggle-ignored-file-state'
 
 ##################################################################################
 # vim-mode level

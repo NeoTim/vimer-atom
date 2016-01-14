@@ -5,26 +5,13 @@
     zoomFontWhenCtrlScrolling: true
     softWrap: true
   core:
-    followSymlinks: false
     projectHome: "/Users/forsginer/repos"
     disabledPackages: [
       "symbols-view"
       "highlight-column"
     ]
     audioBeep: false
-    ignoredNames: [
-      ".git"
-      ".hg"
-      ".svn"
-      ".DS_Store"
-      "._*"
-      ".sass-cache"
-      "Thumbs.db"
-      "node_modules"
-      "bower_components"
-      "dist"
-    ]
-    destroyEmptyPanes: false
+    openEmptyEditorOnStart: false
   "exception-reporting":
     userId: "965f6697-e5db-90fb-04d3-99686e15f6d2"
   "release-notes":
@@ -68,5 +55,14 @@
   "linter-jscs":
     onlyConfig: true
     fixOnSave: true
+    esnext: true
   Termrk:
     defaultHeight: 326
+  "git-hide":
+    hideOnStartup: false
+  "atom-htmltidy":
+    formatOnSave: false
+  blame: {}
+  "git-blame": {}
+  "linter-stylelint":
+    disableWhenNoConfig: true
