@@ -1,68 +1,68 @@
 "*":
-  editor:
-    invisibles: {}
-    showIndentGuide: true
-    zoomFontWhenCtrlScrolling: true
-    softWrap: true
+  Termrk:
+    defaultHeight: 460
+  "atom-beautify":
+    _analyticsUserId: "56d5033f-aafa-4100-91e8-e4275f4c177c"
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  "atom-htmltidy":
+    formatOnSave: false
+  "autoclose-html": {}
+  blame: {}
   core:
-    projectHome: "/Users/forsginer/repos"
+    audioBeep: false
     disabledPackages: [
       "symbols-view"
       "highlight-column"
     ]
-    audioBeep: false
     openEmptyEditorOnStart: false
-  "exception-reporting":
-    userId: "965f6697-e5db-90fb-04d3-99686e15f6d2"
-  "release-notes":
-    viewedVersion: "0.60.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "51662735655162b544370d7edae7153b0177101b"
-  "file-watcher":
-    promptWhenFileHasChangedOnDisk: false
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
-  "save-session":
-    dataSaveFolder: "/Users/forsigner/.atom/packages/save-session/projects"
-  preview:
-    _analyticsUserId: "84d44b4b-b8aa-4ff4-99fd-e8dace59ddc2"
-  "atom-beautify":
-    _analyticsUserId: "56d5033f-aafa-4100-91e8-e4275f4c177c"
+    projectHome: "/Users/forsginer/repos"
   "disable-keybindings":
     allBundledPackages: true
     exceptBundledPackages: [
       "vim-mode"
     ]
-  "linter-eslint":
-    disableWhenNoEslintrcFileInPath: true
-  "symbols-tree-view":
-    autoToggle: true
-  "git-log": {}
-  "atom-ctags":
-    autoBuildTagsWhenActive: true
-  "autoclose-html": {}
-  "tree-view": {}
   docblockr: {}
-  linter: {}
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    softWrap: true
+    zoomFontWhenCtrlScrolling: true
   emmet: {}
-  "tabs-to-spaces":
-    onSave: "untabify"
+  "exception-reporting":
+    userId: "965f6697-e5db-90fb-04d3-99686e15f6d2"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "git-blame": {}
+  "git-hide":
+    hideOnStartup: false
+  "git-log": {}
   "git-projects": {}
   "highlight-column": {}
   jumpy: {}
+  linter: {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
   "linter-jscs":
-    onlyConfig: true
-    fixOnSave: true
     esnext: true
-  Termrk:
-    defaultHeight: 326
-  "git-hide":
-    hideOnStartup: false
-  "atom-htmltidy":
-    formatOnSave: false
-  blame: {}
-  "git-blame": {}
+    fixOnSave: true
+    onlyConfig: true
   "linter-stylelint":
     disableWhenNoConfig: true
+  metrics:
+    userId: "51662735655162b544370d7edae7153b0177101b"
+  preview:
+    _analyticsUserId: "84d44b4b-b8aa-4ff4-99fd-e8dace59ddc2"
+  "release-notes":
+    viewedVersion: "0.60.0"
+  "save-session":
+    dataSaveFolder: "/Users/forsigner/.atom/packages/save-session/projects"
+  "symbols-tree-view":
+    autoToggle: true
+  "tabs-to-spaces":
+    onSave: "untabify"
+  "tree-view": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false

@@ -8,3 +8,4 @@ projects.cson
 snippets.cson
 .apmrc
 storage/
+blob-store/
