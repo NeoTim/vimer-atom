@@ -6,6 +6,4 @@ compile-cache/
 packages/
 projects.cson
 snippets.cson
-.apmrc
 storage/
-blob-store/

@@ -274,5 +274,29 @@
   },
   {
     "name": "wordcount"
+  },
+  {
+    "name": "angularjs-snippets"
+  },
+  {
+    "name": "git-blame"
+  },
+  {
+    "name": "git-hide"
+  },
+  {
+    "name": "language-ejs"
+  },
+  {
+    "name": "language-javascript-better"
+  },
+  {
+    "name": "language-nginx"
+  },
+  {
+    "name": "linter-stylelint"
+  },
+  {
+    "name": "react"
   }
 ]
