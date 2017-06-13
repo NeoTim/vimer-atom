@@ -1,0 +1,79 @@
+'use strict';
+
+const pkg = require('./package.json');
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+
+const exampleBucketPath = './example/node_modules/@ali/bucket';
+
+gulp.task('build', [ 'compile', 'copy:asset' ]);
+gulp.task('build:watch', [ 'compile', 'copy:asset', 'copy:example', 'watch' ]);
+
+gulp.task('compile', [ 'compile:cmp', 'compile:utils' ]);
+
+gulp.task('compile:cmp', () => {
+  return gulp.src('src/components/**/*.js')
+    .pipe(babel())
+
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/components`))
+
+    // for develop
+    .pipe(gulp.dest('./components'));
+});
+
+gulp.task('compile:utils', () => {
+  return gulp.src('src/utils/**/*.js')
+    .pipe(babel())
+
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/utils`))
+
+    // for develop
+    .pipe(gulp.dest('./utils'));
+});
+
+// copy 发布时的全部代码到exampleBucketPath中
+gulp.task('copy:example', () => {
+  const assests = pkg.files;
+
+  return gulp.src(assests, { base: '.' })
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/`));
+});
+
+gulp.task('copy:asset', () => {
+  const assests = [
+    'src/components/**/*.styl',
+    'src/components/**/*.png',
+    'src/components/**/*.md',
+  ];
+
+  return gulp.src(assests)
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/components`))
+
+    .pipe(gulp.dest('./components'));
+});
+// 暂时无用
+gulp.task('copy:dep', () => {
+  return gulp.src('src/components/**/*.json')
+    .pipe(gulp.dest('dist/components'))
+
+    // for develop in example
+    .pipe(gulp.dest('./example/app/components/bucket'));
+});
+
+gulp.task('watch', () => {
+  const files = [
+    'src/components/**/*',
+    'src/utils/**/*',
+    'app/**/*',
+    'config/**/*',
+    'app.js',
+  ];
+  const watcher = gulp.watch(files, [ 'compile', 'copy:asset', 'copy:example' ]);
+  watcher.on('change', function(event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+  });
+});

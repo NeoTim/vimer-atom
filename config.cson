@@ -1,8 +1,14 @@
 "*":
   Termrk:
     defaultHeight: 460
+  "activate-power-mode":
+    screenShake:
+      enabled: false
   "atom-beautify":
-    _analyticsUserId: "56d5033f-aafa-4100-91e8-e4275f4c177c"
+    general:
+      _analyticsUserId: "56d5033f-aafa-4100-91e8-e4275f4c177c"
+    html:
+      wrap_attributes_indent_size: 2
   "atom-ctags":
     autoBuildTagsWhenActive: true
   "atom-htmltidy":
@@ -10,18 +16,38 @@
   "autoclose-html": {}
   blame: {}
   core:
-    audioBeep: false
     disabledPackages: [
-      "symbols-view"
       "highlight-column"
+      "linter-htmlhint"
+      "linter-scss-lint"
+      "angularjs-snippets"
+      "browser-plus"
+      "jquery-snippets"
+      "angularjs"
+      "atom-bootstrap3"
+      "atom-wallaby"
+      "dash"
+      "activate-power-mode"
+      "symbols-view"
+      "markdown-scroll-sync"
+      "package-generator"
+      "git-blame"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "bower_components"
     ]
     openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: []
     projectHome: "/Users/forsginer/repos"
   "disable-keybindings":
     allBundledPackages: true
-    exceptBundledPackages: [
-      "vim-mode"
-    ]
+    exceptBundledPackages: []
   docblockr: {}
   editor:
     invisibles: {}
@@ -39,16 +65,18 @@
   "git-log": {}
   "git-projects": {}
   "highlight-column": {}
-  jumpy: {}
+  jumpy:
+    highContrast: true
   linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
-  "linter-jscs":
-    esnext: true
-    fixOnSave: true
-    onlyConfig: true
   "linter-stylelint":
     disableWhenNoConfig: true
+  "linter-ui-default":
+    panelHeight: 47
+    showPanel: true
+  markclip:
+    saveType: "custom file"
   metrics:
     userId: "51662735655162b544370d7edae7153b0177101b"
   preview:
@@ -57,12 +85,45 @@
     viewedVersion: "0.60.0"
   "save-session":
     dataSaveFolder: "/Users/forsigner/.atom/packages/save-session/projects"
+  smalls:
+    showDeprecationWarning: false
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
   "symbols-tree-view":
     autoToggle: true
   "tabs-to-spaces":
     onSave: "untabify"
-  "tree-view": {}
+  "tree-view":
+    hideIgnoredNames: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  "vim-mode-plus":
+    clearMultipleCursorsOnEscapeInsertMode: true
+    highlightSearch: true
+    incrementalSearch: true
+    keepColumnOnSelectTextObject: true
+    keymapCCToChangeSmartWord: true
+    keymapSemicolonToInnerAnyPairInOperatorPendingMode: true
+    keymapSemicolonToInnerAnyPairInVisualMode: true
+    keymapUnderscoreToReplaceWithRegister: true
+    moveToFirstCharacterOnVerticalMotion: true
+    stayOnDelete: true
+    stayOnTransformString: true
+    stayOnYank: true
+    updateRegisterOnChangeOrSubstitute: true
+    useClipboardAsDefaultRegister: true
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
+  wakatime:
+    apikey: "Enter your api key..."
   welcome:
     showOnStartup: false
+  zentabs:
+    neverCloseDirty: true
+".css.source.stylus":
+  editor:
+    autoIndentOnPaste: true

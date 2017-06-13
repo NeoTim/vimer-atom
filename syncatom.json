@@ -298,5 +298,62 @@
   },
   {
     "name": "react"
+  },
+  {
+    "name": "Stylus"
+  },
+  {
+    "name": "Zen"
+  },
+  {
+    "name": "busy-signal"
+  },
+  {
+    "name": "es6-javascript"
+  },
+  {
+    "name": "git-time-machine"
+  },
+  {
+    "name": "hey-pane"
+  },
+  {
+    "name": "intentions"
+  },
+  {
+    "name": "language-gitignore"
+  },
+  {
+    "name": "language-stylus"
+  },
+  {
+    "name": "language-vue"
+  },
+  {
+    "name": "linter-ui-default"
+  },
+  {
+    "name": "markclip"
+  },
+  {
+    "name": "split-diff"
+  },
+  {
+    "name": "status-bar-blame"
+  },
+  {
+    "name": "tag"
+  },
+  {
+    "name": "vim-mode-plus"
+  },
+  {
+    "name": "vim-mode-plus-ex-mode"
+  },
+  {
+    "name": "wakatime"
+  },
+  {
+    "name": "zentabs"
   }
 ]

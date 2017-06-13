@@ -31,9 +31,6 @@
 
   #find
   # 'cmd-f': 'project-find:toggle'
-
-  'ctrl-o': 'aplication:open'
-  'ctrl-shift-o': 'aplication:add-project-folder'
   'alt-o': 'git-projects:toggle' # git-project
 
   # tree view
@@ -55,7 +52,8 @@
   'cmd-f': 'find-and-replace:show'
   'cmd-alt-f': 'find-replace:show-replace'
 
-################################################################################# body level
+################################################################################
+ # body level
 ##################################################################################
 'atom-text-editor':
   'ctrl-k': 'core:move-up'
@@ -68,12 +66,22 @@
 'atom-workspace':
   'ctrl-9': 'git-hide:toggle-ignored-file-state'
 
+
+
 ##################################################################################
 # vim-mode level
 ##################################################################################
 
-## vim command-mode
-'atom-text-editor.vim-mode.normal-mode:not(.insert-mode)':
+'atom-text-editor.vim-mode-plus.insert-mode.autocomplete-active':
+  'escape': 'autocomplete-plus:cancel'
+
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'j k': 'vim-mode-plus:activate-normal-mode' # jk to escape
+
+# vim command-mode
+'atom-text-editor.vim-mode-plus.normal-mode':
+
+  '; f': 'jumpy:toggle'
 
   'c c': 'editor:toggle-line-comments' # comment
   'alt-space': 'termrk:toggle'
@@ -86,6 +94,10 @@
   'ctrl-l': 'window:focus-pane-on-right'
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
+
+  'ctrl-]': 'hey-pane:toggle-focus-of-active-pane'
+
+
 
   # tab
   't n': 'pane:show-next-item'
@@ -105,14 +117,9 @@
   # 'atom-text-editor[data-grammar="YOUR GRAMMAR HERE"]:not([mini])':
     # 'tab': 'emmet:expand-abbreviation-with-tab'
 
-  # jscs
-  '; j': 'jscs-fixer:fix'
-
   # ternjs
   '; t': 'tern:restart'
 
-  # smalls
-  '; a': 'smalls:start'
 
   # open this
   'g f': 'open-this:here'
@@ -122,14 +129,13 @@
   'c l': 'clipboard-plus:toggle'
   '; w': 'core:save'
 
-  '; f': 'atom-beautify:beautify-editor' # code format
+  '; b': 'atom-beautify:beautify-editor' # code format
   '; e': 'esformatter' # code format
   '; c': 'csscomb:run' # csscomb
 
   'g t': 'atom-ctags:go-to-declaration'
 
   'm d': 'markdown-preview:toggle'
-  't b': 'symbols-tree-view:toggle'
 
   'ctrl-shift-f': 'fuzzy-grep:toggle'
 
@@ -142,6 +148,10 @@
   'shift-h': 'editor:move-to-first-character-of-line'
   'shift-l': 'editor:move-to-end-of-screen-line'
 
+  # move
+  'j': 'vim-mode-plus:move-down-screen'
+  'k': 'vim-mode-plus:move-up-screen'
+
   'ctrl-t': 'atom-ctags:toggle-file-symbols'
 
   # selection
@@ -149,6 +159,10 @@
 
 
 ## vim visual-mode
-'atom-text-editor.vim-mode.visual-mode':
+'atom-text-editor.vim-mode-plus.visual-mode':
   'c c': 'editor:toggle-line-comments'
   'v': 'expand-region:expand'
+  'alt-v': 'expand-region:shrink'
+
+
+## jumpy

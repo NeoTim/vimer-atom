@@ -1,0 +1,161 @@
+'use strict';
+
+const pkg = require('./package.json');
+const fs = require('fs');
+const path = require('path');
+const exec = require('child_process').exec;
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const rename = require('gulp-rename');
+const merge = require('merge-stream');
+const runSequence = require('run-sequence');
+
+const exampleBucketPath = './example/node_modules/@ali/bucket';
+const DOCS_PATH = '_docs';
+
+gulp.task('build', [ 'compile', 'copy:asset' ]);
+gulp.task('build:watch', cb => runSequence([ 'compile', 'copy:asset', 'copy:example' ], 'install:example', 'watch', cb));
+
+gulp.task('compile', [ 'compile:cmp', 'compile:utils' ]);
+gulp.task('docs', cb => runSequence('docs:crawling', 'docs:summary', 'docs:readme', 'docs:copyall', cb));
+
+gulp.task('compile:cmp', () => {
+  return gulp.src('src/components/**/*.js')
+    .pipe(babel())
+
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/components`))
+
+    // for develop
+    .pipe(gulp.dest('./components'));
+});
+
+gulp.task('compile:utils', () => {
+  return gulp.src('src/utils/**/*.js')
+    .pipe(babel())
+
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/utils`))
+
+    // for develop
+    .pipe(gulp.dest('./utils'));
+});
+
+// copy 发布时的全部代码到exampleBucketPath中
+gulp.task('copy:example', () => {
+  const assests = pkg.files;
+
+  return gulp.src(assests, { base: '.' })
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/`));
+});
+
+// 给 example 下的 bucket 安装依赖
+gulp.task('install:example', () => {
+  const targetPath = path.resolve(__dirname, exampleBucketPath);
+  return new Promise((resolve, reject) => {
+    exec(`cd ${targetPath} && tnpm i --production`, err => {
+      if (err) reject(err);
+      else resolve();
+    });
+  });
+});
+
+gulp.task('copy:asset', () => {
+  const assests = [
+    'src/components/**/*.styl',
+    'src/components/**/*.png',
+    'src/components/**/*.md',
+  ];
+
+  return gulp.src(assests)
+    // for develop in example
+    .pipe(gulp.dest(`${exampleBucketPath}/components`))
+
+    .pipe(gulp.dest('./components'));
+});
+// 暂时无用
+gulp.task('copy:dep', () => {
+  return gulp.src('src/components/**/*.json')
+    .pipe(gulp.dest('dist/components'))
+
+    // for develop in example
+    .pipe(gulp.dest('./example/app/components/bucket'));
+});
+
+gulp.task('watch', () => {
+  const files = [
+    'src/components/**/*',
+    'src/utils/**/*',
+    'app/**/*',
+    'config/**/*',
+    'agent.js',
+    'app.js',
+  ];
+
+  const watcher = gulp.watch(files, () => {
+    runSequence('compile', 'copy:asset', 'copy:example');
+  });
+
+  watcher.on('change', function(event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+  });
+});
+
+
+/**
+ * 遍历组件文件夹，抓取 README.md，并改名成文件夹名字，最后输出到 DOCS_PATH
+ * @example src/components/info/README.md => _site/_docs/info.md
+ */
+gulp.task('docs:crawling', () => {
+  const getFolders = dir => {
+    return fs.readdirSync(dir)
+      .filter(file => {
+        return fs.statSync(path.resolve(dir, file)).isDirectory();
+      });
+  };
+  const componentsPath = 'src/components';
+  const folders = getFolders(componentsPath);
+
+  const tasks = folders.map(folder => {
+    return gulp.src(path.resolve(componentsPath, folder, 'README.md'))
+    .pipe(rename(folder + '.md'))
+    .pipe(gulp.dest(DOCS_PATH));
+  });
+  return merge(tasks);
+});
+
+/**
+ * 生成 SUMMARY.md 文件
+ */
+gulp.task('docs:summary', () => {
+  const files = fs.readdirSync(DOCS_PATH).filter(file => file !== 'SUMMARY.md');
+  let content = '';
+  content += '- [Quick Start](README.md)\n';
+  files.forEach(filename => {
+    // 读取每个 README.md 的第一行作为名字
+    let title = fs.readFileSync(path.resolve(DOCS_PATH, filename), 'utf8')
+      .match(/^#\s(.+)$/im);
+    if (!title) title = filename;
+    content += `- [${title[1]}](${filename})\n`;
+  });
+  fs.writeFileSync(path.resolve(DOCS_PATH, 'SUMMARY.md'), content, { encoding: 'utf8' });
+
+  return Promise.resolve();
+});
+
+/**
+ * 复制项目 README
+ */
+gulp.task('docs:readme', () => {
+  return gulp.src('./README.md')
+    .pipe(gulp.dest(DOCS_PATH));
+});
+
+/**
+ * 复制 _doc 下所有文件到 example
+ */
+gulp.task('docs:copyall', () => {
+  return gulp.src(DOCS_PATH + '/*')
+    .pipe(gulp.dest('example/app/public/docs'));
+});

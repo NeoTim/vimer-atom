@@ -4,7 +4,7 @@
  * This stylesheet is loaded when Atom starts up and is reloaded automatically
  * when it is changed.
  *
- * If you are unfamiliar with LESS, you can read more about it here:
+ * If you are unfamiliar with LESS, you can read more about it here
  * http://www.lesscss.org
  */
 .tree-view {
@@ -66,12 +66,27 @@ atom-text-editor::shadow .highlight-column {
 //===========================================================================
 // jumpy
 //===========================================================================
-atom-text-editor::shadow .jumpy {
-  &.label {
-    background: #2094ff;
-    color: #fff;
-  }
-  &.jump {
 
+atom-text-editor {
+  .jumpy-label {
+    // Regular labels
+    background-color: black;
+    color: white;
+    &.high-contrast {
+        // High Contrast labels (activated in settings)
+        background-color: #000;
+        color: #e67e22;
+    }
   }
 }
+
+// .cursor-line-background(@mode, @color) {
+//   atom-text-editor.vim-mode-plus.@{mode}.is-focused {
+//     & .lines .line.cursor-line {
+//       background-color: @color
+//     }
+//   }
+// }
+// .cursor-line-background(normal-mode, fadeout(gray, 80%));
+// .cursor-line-background(insert-mode, fadeout(gray, 80%));
+// .cursor-line-background(operator-pending-mode, fadeout(yellow, 80%));
