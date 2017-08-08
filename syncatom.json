@@ -15,9 +15,6 @@
     "name": "atom-bootstrap3"
   },
   {
-    "name": "atom-ctags"
-  },
-  {
     "name": "atom-fuzzy-grep"
   },
   {
@@ -43,9 +40,6 @@
   },
   {
     "name": "blame"
-  },
-  {
-    "name": "browser-plus"
   },
   {
     "name": "clipboard-plus"
@@ -76,9 +70,6 @@
   },
   {
     "name": "esformatter"
-  },
-  {
-    "name": "ex-mode"
   },
   {
     "name": "expand-region"
@@ -129,13 +120,7 @@
     "name": "jquery-snippets"
   },
   {
-    "name": "jscs-fixer"
-  },
-  {
     "name": "jumpy"
-  },
-  {
-    "name": "language-SCSS"
   },
   {
     "name": "language-babel"
@@ -157,9 +142,6 @@
   },
   {
     "name": "linter-htmlhint"
-  },
-  {
-    "name": "linter-jscs"
   },
   {
     "name": "linter-jsonlint"
@@ -252,9 +234,6 @@
     "name": "vim-surround"
   },
   {
-    "name": "activate-power-mode"
-  },
-  {
     "name": "auto-copyright"
   },
   {
@@ -288,17 +267,11 @@
     "name": "language-ejs"
   },
   {
-    "name": "language-javascript-better"
-  },
-  {
     "name": "language-nginx"
   },
   {
     "name": "linter-stylelint"
-  },
-  {
-    "name": "react"
-  },
+  },,
   {
     "name": "Stylus"
   },
